@@ -7,7 +7,7 @@ def gen_board(n, static_x, static_y):
         if i == static_x:
             board.append(static_y)
             continue
-        rand_y = random.randint(0, n)
+        rand_y = random.randint(0, n-1)
         board.append(rand_y)
     return board
 
@@ -119,7 +119,7 @@ def n_queens_restart(n, k, static_x, static_y):
 
 
 def main():
-    n_queens(6, 10, 0, 0)
+    n_queens_restart(1000, 8, 0, 0)
 
 
 if __name__ == '__main__':
